@@ -1,0 +1,169 @@
+/* ========== Responsive Design ========== */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+  }
+  
+  .grid {
+    grid-template-columns: 280px 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  aside.sidebar {
+    order: 2;
+  }
+  
+  main.content {
+    order: 1;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .search input {
+    min-width: 80px;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar-inner {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .top-right {
+    justify-content: space-between;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links button {
+    flex: 1;
+    min-width: 80px;
+  }
+  
+  .container {
+    margin: 16px auto;
+    padding: 0 12px;
+  }
+  
+  .grid {
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .fab {
+    right: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+  
+  .modal {
+    margin: 16px;
+    max-width: calc(100vw - 32px);
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 0.9rem;
+  }
+  
+  .brand .logo {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .card .actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    justify-content: center;
+  }
+  
+  .stats {
+    flex-direction: column;
+  }
+  
+  .stat {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .filter-controls {
+    flex-direction: column;
+  }
+  
+  .filter-controls select {
+    min-width: 100%;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .fab {
+    transition: none;
+  }
+  
+  .fab:hover {
+    transform: none;
+  }
+  
+  .page {
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn.ghost {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .modal {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+}

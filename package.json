@@ -1,0 +1,42 @@
+{
+  "name": "pengaduan-app",
+  "version": "1.0.0",
+  "description": "Sistem Pengaduan Masyarakat - Web Application untuk pelaporan masalah infrastruktur dan pelayanan publik",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -s -l 3000",
+    "dev": "npx serve . -s -l 3000 --cors",
+    "build": "echo 'No build process needed for vanilla JS app'",
+    "lint": "npx eslint js/**/*.js",
+    "format": "npx prettier --write \"**/*.{js,css,html,md}\"",
+    "validate": "npx html-validate index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/pengaduan-app.git"
+  },
+  "keywords": [
+    "pengaduan",
+    "complaint-system",
+    "public-service",
+    "government",
+    "vanilla-js",
+    "responsive"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "html-validate": "^8.15.0",
+    "serve": "^14.2.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

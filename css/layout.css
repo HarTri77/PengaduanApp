@@ -1,0 +1,151 @@
+/* ========== Layout Structure ========== */
+.grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  margin-top: 22px;
+}
+
+/* ========== Sidebar ========== */
+aside.sidebar {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 14px;
+  padding: 16px;
+  min-height: 420px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Profile section */
+.profile {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #ffaaaa;
+  border: 2px solid rgba(255, 255, 255, 0.03);
+  background-size: cover;
+  background-position: center;
+}
+
+.profile .meta {
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.profile .meta .name {
+  font-weight: 700;
+  color: #fff;
+}
+
+.profile .meta .email {
+  font-size: 0.82rem;
+  color: #d6d6d6;
+}
+
+/* Menu navigation */
+.menu {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu button {
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  color: #eee;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu button:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.menu button.active {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.12),
+    rgba(255, 0, 0, 0.04)
+  );
+  box-shadow: 0 6px 14px rgba(183, 28, 28, 0.06);
+  color: #ffdede;
+}
+
+/* ========== Main Content Area ========== */
+main.content {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 14px;
+  padding: 16px;
+  min-height: 420px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Page sections */
+.page {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page headers */
+.page h2 {
+  color: #ffbcbc;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.page .muted {
+  margin-bottom: 16px;
+}
+
+/* Filter controls */
+.filter-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-controls select {
+  min-width: 140px;
+  flex: none;
+}

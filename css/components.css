@@ -1,0 +1,348 @@
+/* ========== Top Navigation Bar ========== */
+nav.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(90deg, #b71c1c 0, #0b0b0b 60%);
+  padding: 12px 0;
+  box-shadow: 0 6px 18px rgba(183, 28, 28, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: radial-gradient(circle at 20% 20%, #ff4d4d, #b71c1c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(183, 28, 28, 0.25);
+}
+
+.top-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Search component */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  min-width: 160px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-links button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-links button:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: #ffd1d1;
+}
+
+/* ========== Buttons ========== */
+.btn {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #ffdede;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #ff3d3d, #b71c1c);
+  color: white;
+  box-shadow: 0 8px 24px rgba(183, 28, 28, 0.18);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(183, 28, 28, 0.25);
+}
+
+/* ========== Cards ========== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65);
+}
+
+.card .thumb {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 14px;
+}
+
+.card h3 {
+  color: #ffbcbc;
+  font-size: 1.03rem;
+  margin-bottom: 6px;
+}
+
+.card p {
+  color: #dcdcdc;
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+}
+
+.card .actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* Meta row */
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ========== Badges ========== */
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.badge.baru {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+.badge.proses {
+  background: #ffd9a8;
+  color: #130f0a;
+}
+
+.badge.selesai {
+  background: #ff2b2b;
+  color: #fff;
+}
+
+/* ========== Rating Component ========== */
+.rating {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.rating .star {
+  font-size: 20px;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.rating .star:hover {
+  color: #ffdddd;
+  transform: scale(1.05);
+}
+
+.rating .star.active {
+  color: #ffbcbc;
+  transform: scale(1.08);
+  text-shadow: 0 4px 12px rgba(183, 28, 28, 0.12);
+}
+
+/* ========== File Preview ========== */
+.file-preview {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.thumb-preview {
+  width: 110px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* ========== Stats Component ========== */
+.stats {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.stat {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.stat .num {
+  font-weight: 700;
+  color: #ffbcbc;
+  font-size: 1.05rem;
+}
+
+.stat .label {
+  font-size: 0.78rem;
+  color: #cfcfcf;
+}
+
+/* ========== Floating Action Button ========== */
+.fab {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 110;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff3b3b, #b71c1c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  box-shadow: 0 12px 36px rgba(183, 28, 28, 0.28);
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  border: none;
+}
+
+.fab:hover {
+  transform: scale(1.06) rotate(-8deg);
+}
+
+/* ========== Modal ========== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  width: 100%;
+  max-width: 720px;
+  background: #101010;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal h2 {
+  color: #ffbcbc;
+  margin-bottom: 10px;
+}
